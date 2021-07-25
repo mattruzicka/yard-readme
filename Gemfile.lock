@@ -1,0 +1,19 @@
+PATH
+  remote: .
+  specs:
+    yard-readme (0.1.0)
+      yard
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+    yard (0.9.26)
+
+PLATFORMS
+  arm64-darwin-20
+
+DEPENDENCIES
+  yard-readme!
+
+BUNDLED WITH
+   2.2.24

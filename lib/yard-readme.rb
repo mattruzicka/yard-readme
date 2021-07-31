@@ -6,7 +6,7 @@ require_relative 'yard-readme/docstring_parser'
 
 #
 # @readme
-#   A [YARD](https://github.com/lsegal/yard) plugin used by
+#   A [YARD](https://yardoc.org) plugin used by
 #   [readme_yard](https://github.com/mattruzicka/readme_yard).
 #   It adds a `@readme` tag to YARD.
 #

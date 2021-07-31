@@ -27,7 +27,7 @@ module YARDReadme
               docstring << parse_content(directive.expanded_text).chomp
             end
           else
-            push_readme_text(docstring, buf) if tag_name == 'readme'
+            docstring << parse_readme_text(buf) if tag_name == 'readme' && !buf.empty?
             create_tag(tag_name, buf)
           end
           tag_name = nil
@@ -61,14 +61,8 @@ module YARDReadme
       docstring
     end
 
-    def push_readme_text(docstring, buf)
-      return if buf.empty?
-
-      buf.split("\n").each do |buf_line|
-        docstring << buf_line
-        docstring << "\n"
-      end
-      docstring << "\n"
+    def parse_readme_text(text)
+      text << "\n\n"
     end
   end
 end

@@ -1,35 +1,11 @@
-# Yard::Readme
+# yard-readme
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/yard/readme`. To experiment with that code, run `bin/console` for an interactive prompt.
+A YARD plugin used by [readme_yard](https://github.com/mattruzicka/readme_yard). It adds the `@readme` tag to YARD.
 
-TODO: Delete this and the text above, and describe your gem
+It also replaces the default `YARD::DocstringParser` so that only the the `@readme` tag name, not its text, is stripped from the generated documentation. I prefer this over the default YARD behavior for this particular tag because it allows the comments in the source code to signal the README dependency without pushing the generated YARD documentation into a separate "readme" section. That said, I would welcome a PR that adds the default behavior as an option, as I think it could be preferable for some use cases.
 
-## Installation
-
-Add this line to your application's Gemfile:
-
-```ruby
-gem 'yard-readme'
-```
-
-And then execute:
-
-    $ bundle install
-
-Or install it yourself as:
-
-    $ gem install yard-readme
-
-## Usage
-
-TODO: Write usage instructions here
-
-## Development
-
-After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake test` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
-
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and the created tag, and push the `.gem` file to [rubygems.org](https://rubygems.org).
+Ideally, I or someone would open a YARD PR to make leaving the tag text an option when registering a tag. This plugin's current behavior of replacing the `YARD::DocstringParser` could potentially conflict with other YARD plugins and is also more vulnerable to change.
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/yard-readme.
+Bug reports and pull requests are welcome on GitHub at https://github.com/mattruzicka/yard-readme.

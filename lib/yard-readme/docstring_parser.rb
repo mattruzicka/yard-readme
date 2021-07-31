@@ -1,4 +1,14 @@
 module YARDReadme
+  #
+  # @readme
+  #   Ideally, I or someone would open a YARD PR to make leaving
+  #   the tag text an option when registering a tag. Especially
+  #   since this plugin's current behavior of replacing the
+  #   `YARD::DocstringParser` could potentially conflict with
+  #   other YARD plugins and is also more vulnerable to change.
+  #
+  # Doing so would make this custom parser obsolete.
+  #
   class DocstringParser < YARD::DocstringParser
     def parse_content(content)
       content = content.split(/\r?\n/) if content.is_a?(String)

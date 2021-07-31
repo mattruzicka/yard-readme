@@ -3,19 +3,19 @@
 require_relative "lib/yard-readme/version"
 
 Gem::Specification.new do |spec|
-  spec.name          = "yard-readme"
-  spec.version       = YARDReadme::VERSION
-  spec.authors       = ["Matt Ruzicka"]
+  spec.name = "yard-readme"
+  spec.version = YARDReadme::VERSION
+  spec.authors = ["Matt Ruzicka"]
+  spec.license = "MIT"
 
-  spec.summary       = "Enhance your README with YARD"
-  spec.description   = "Generate your README using comments in your code"
-  spec.homepage      = 'https://github.com/mattruzicka/yard-readme'
+  spec.summary = "Enhance your README with YARD"
+  spec.description = "Generate your README using comments in your code"
+  spec.homepage = 'https://github.com/mattruzicka/yard-readme'
   spec.required_ruby_version = ">= 2.4.0"
 
   spec.metadata["homepage_uri"] = spec.homepage
-  spec.metadata["source_code_uri"] = 'https://github.com/mattruzicka/yard-readme'
-  spec.metadata["changelog_uri"] = 'https://github.com/mattruzicka/yard-readme' \
-                                   '/blob/master/CHANGELOG.md'
+  spec.metadata["source_code_uri"] = spec.homepage
+  spec.metadata["changelog_uri"] = "#{spec.homepage}/blob/master/CHANGELOG.md"
 
   # Specify which files should be added to the gem when it is released.
   # The `git ls-files -z` loads the files in the RubyGem that have been added into git.
@@ -27,9 +27,9 @@ Gem::Specification.new do |spec|
   spec.require_paths = ["lib"]
 
   # Uncomment to register a new dependency of your gem
-  spec.add_dependency "yard"
+  spec.add_dependency "yard", "~> 0.9.26"
 
-  spec.add_development_dependency 'readme_yard'
+  spec.add_development_dependency 'readme_yard', "~> 0.1"
 
   # For more information and examples about making a new gem, checkout our
   # guide at: https://bundler.io/guides/creating_gem.html

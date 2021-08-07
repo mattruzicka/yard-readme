@@ -3,6 +3,7 @@
 require 'yard'
 require_relative 'yard-readme/version'
 require_relative 'yard-readme/docstring_parser'
+require_relative 'yard-readme/tag_factory'
 
 #
 # @readme
@@ -20,5 +21,14 @@ require_relative 'yard-readme/docstring_parser'
 #
 module YARDReadme; end
 
+#
+# @see https://www.rubydoc.info/gems/yard/0.9.13/YARD/DocstringParser
+#
 YARD::Docstring.default_parser = YARDReadme::DocstringParser
-YARD::Tags::Library.define_tag('README', :readme)
+
+#
+# @see https://www.rubydoc.info/gems/yard/file/docs/TagsArch.md
+#
+YARD::Tags::Library.default_factory = YARDReadme::TagFactory
+
+YARD::Tags::Library.define_tag('README', :readme, :with_title_and_text)

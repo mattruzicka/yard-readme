@@ -11,20 +11,20 @@ module YARDReadme
   #
   class DocstringParser < YARD::Docstring.default_parser
     class << self
-      attr_accessor :readme_tag_args
+      attr_accessor :readme_tag_names
 
-      def readme_tag_args_regex
-        @readme_tag_args_regex ||= /\A(#{readme_tag_args.join("|")})/
+      def readme_tag_names_regex
+        @readme_tag_names_regex ||= /\A(#{readme_tag_names.join("|")})/
       end
 
-      def readme_tag_args_regex?
-        readme_tag_args && !readme_tag_args.empty?
+      def readme_tag_names_regex?
+        readme_tag_names && !readme_tag_names.empty?
       end
 
       def strip_readme_tag_arg(text)
-        return text unless readme_tag_args_regex?
+        return text unless readme_tag_names_regex?
 
-        text.sub(readme_tag_args_regex, "")
+        text.sub(readme_tag_names_regex, "")
       end
     end
 

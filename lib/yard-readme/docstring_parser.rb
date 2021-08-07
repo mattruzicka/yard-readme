@@ -9,7 +9,7 @@ module YARDReadme
   #
   # Doing so would make this custom parser obsolete.
   #
-  class DocstringParser < YARD::DocstringParser
+  class DocstringParser < YARD::Docstring.default_parser
     def parse_content(content)
       content = content.split(/\r?\n/) if content.is_a?(String)
       return '' if !content || content.empty?

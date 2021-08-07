@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    yard-readme (0.1.1)
+    yard-readme (0.2.0)
       yard (~> 0.9.26)
 
 GEM
@@ -11,7 +11,7 @@ GEM
       rexml
     pastel (0.8.0)
       tty-color (~> 0.5)
-    readme_yard (0.1.1)
+    readme_yard (0.1.2)
       tty-markdown (~> 0.7)
       yard-readme (~> 0.1)
     rexml (3.2.5)

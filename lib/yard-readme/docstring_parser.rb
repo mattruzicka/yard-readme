@@ -10,6 +10,24 @@ module YARDReadme
   # Doing so would make this custom parser obsolete.
   #
   class DocstringParser < YARD::Docstring.default_parser
+    class << self
+      attr_accessor :readme_tag_args
+
+      def readme_tag_args_regex
+        @readme_tag_args_regex ||= /\A(#{readme_tag_args.join("|")})/
+      end
+
+      def readme_tag_args_regex?
+        readme_tag_args && !readme_tag_args.empty?
+      end
+
+      def strip_readme_tag_arg(text)
+        return text unless readme_tag_args_regex?
+
+        text.sub(readme_tag_args_regex, "")
+      end
+    end
+
     def parse_content(content)
       content = content.split(/\r?\n/) if content.is_a?(String)
       return '' if !content || content.empty?
@@ -73,7 +91,7 @@ module YARDReadme
     end
 
     def parse_readme_text(text)
-      readme_text = text.sub(/\A(source|docstring|object)/, "")
+      readme_text = self.class.strip_readme_tag_arg(text)
       readme_text << "\n\n" if readme_text
     end
 

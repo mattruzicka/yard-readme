@@ -1,8 +1,12 @@
 ## [Unreleased]
 
+## [0.3.0] - 2021-08-07
+
+- Rename newly added methods be373f150e865b933a58a950e6a5c654395e17c4
+
 ## [0.2.0] - 2021-08-07
 
-- Be able to supprot new readme tag args in readme_yard without updating this gem b76ad2459168e4361ab38912e6faa7e36f249cec
+- Be able to support new readme tag args in readme_yard without updating this gem b76ad2459168e4361ab38912e6faa7e36f249cec
 
 ## [0.1.2] - 2021-08-07
 

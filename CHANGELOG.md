@@ -1,4 +1,31 @@
-## [Unreleased]
+## [0.4.0] - 2025-05-03
+
+### Breaking Changes
+- Changed module namespace from `YARDReadme` to `YARD::Readme` for better integration with YARD's namespace
+- Moved files from `lib/yard-readme/` to `lib/yard/readme/` to match the new namespace structure
+- Increased minimum required Ruby version from 2.4.0 to 3.0.0
+
+### Features
+- Improved documentation with comprehensive explanations of how custom readme tags work
+- Added example for `YARD::Readme::DocstringParser.readme_tag_names` to demonstrate usage
+- Enhanced docstring comments with detailed API documentation
+- Updated YARD plugin to better integrate with readme_yard 0.3.0+
+
+### Documentation Updates
+- Restructured README with clear sections explaining the plugin's functionality
+- Added detailed documentation for each component of the plugin:
+  - Custom Readme Tag Support
+  - Tag Processing functionality
+  - Tag Method descriptions
+  - Readme Text Processing explanations
+
+### Dependencies
+- Updated YARD dependency from `~> 0.9.26` to `~> 0.9` to support newer versions
+- Removed specific readme_yard development dependency, now integrates with any compatible version
+
+### Internal Changes
+- Removed custom .yardopts file as it's now using the default configuration from readme_yard gem
+- Added comprehensive RDoc-style documentation to all classes and methods
 
 ## [0.3.0] - 2021-08-07
 

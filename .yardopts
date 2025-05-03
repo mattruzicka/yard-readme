@@ -1,3 +1,0 @@
--e lib/yard-readme.rb
---markup markdown
-lib/**/*.rb

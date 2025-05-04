@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require_relative 'lib/yard/readme/version'
+require_relative 'lib/yard/readme/description'
 
 Gem::Specification.new do |spec|
   spec.name = "yard-readme"
@@ -9,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.license = "MIT"
 
   spec.summary = "YARD plugin for the readme_yard gem"
-  spec.description = "A YARD plugin that introduces the @readme tag and powers the readme_yard gem, enabling developers to embed code comments directly into README sections. This eliminates redundancy and keeps documentation consistent across code and project READMEs."
+  spec.description = YARD::Readme::DESCRIPTION
   spec.homepage = 'https://github.com/mattruzicka/yard-readme'
   spec.required_ruby_version = ">= 3.0.0"
 

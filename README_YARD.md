@@ -1,6 +1,8 @@
 # yard-readme
 
-{@readme YARD::Readme}
+Built for the [readme_yard](https://github.com/mattruzicka/readme_yard) gem as:
+
+{@readme YARD::Readme::DESCRIPTION}
 
 This plugin replaces YARD's default docstring parser with a custom one that handles @readme tags differently. {@readme YARD::Readme::DocstringParser}
 

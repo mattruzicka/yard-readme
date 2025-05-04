@@ -18,14 +18,14 @@ module YARD
         # @readme
         #   Custom readme tag names that should be stripped from the docstring
         #   but preserved in the tag's text. This is used to support the nested tag
-        #   feature of readme_yard, where tags like `@readme comment`, `@readme source`,
-        #   and `@readme object` control what content gets embedded in the README.
+        #   feature of readme_yard, where tags like `@readme comment`, `@readme code`,
+        #   and `@readme source` control what content gets embedded in the README.
         #
         #   By setting this attribute with an array of tag names (without the "@readme" prefix),
         #   the parser will recognize these as special readme tags and handle them appropriately.
         #
         # @example
-        #   YARD::Readme::DocstringParser.readme_tag_names = ["comment", "source", "object"]
+        #   YARD::Readme::DocstringParser.readme_tag_names = ["comment", "code", "source"]
         #
         attr_accessor :readme_tag_names
 

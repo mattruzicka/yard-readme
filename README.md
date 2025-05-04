@@ -1,17 +1,8 @@
 # yard-readme
 
-A [YARD](https://yardoc.org) plugin used by
-[readme_yard](https://github.com/mattruzicka/readme_yard).
-It adds a `@readme` tag to YARD.
+Built for the [readme_yard](https://github.com/mattruzicka/readme_yard) gem as:
 
-It also replaces the default docstring parser so that only
-`@readme` tags and not their text values are stripped from
-the generated documentation. I prefer this over the default
-YARD behavior for the `@readme` tag because it allows the
-comments in the source code to signal the README dependency
-without pushing the generated YARD documentation into a
-separate "readme" section.
-
+A YARD plugin that introduces the @readme tag and powers the readme_yard gem, enabling developers to embed code comments directly into README sections. This eliminates redundancy and keeps documentation consistent across code and project READMEs.
 
 This plugin replaces YARD's default docstring parser with a custom one that handles @readme tags differently. This custom DocstringParser extends YARD's default parser to provide
 special handling for @readme tags. The main functionality includes:
@@ -26,15 +17,15 @@ special handling for @readme tags. The main functionality includes:
 
 The yard-readme plugin includes support for custom readme tags as used by readme_yard. Custom readme tag names that should be stripped from the docstring
 but preserved in the tag's text. This is used to support the nested tag
-feature of readme_yard, where tags like `@readme comment`, `@readme source`,
-and `@readme object` control what content gets embedded in the README.
+feature of readme_yard, where tags like `@readme comment`, `@readme code`,
+and `@readme source` control what content gets embedded in the README.
 
 By setting this attribute with an array of tag names (without the "@readme" prefix),
 the parser will recognize these as special readme tags and handle them appropriately.
 
 
 ```ruby
-YARD::Readme::DocstringParser.readme_tag_names = ["comment", "source", "object"]
+YARD::Readme::DocstringParser.readme_tag_names = ["comment", "code", "source"]
 ```
 
 

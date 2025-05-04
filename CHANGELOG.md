@@ -1,3 +1,10 @@
+## [0.5.0] - 2025-05-04
+
+- Extracted description into separate file `lib/yard/readme/description.rb`
+- Updated documentation to use this centralized description in gemspec and README
+- Updated tag examples from `@readme object` to `@readme code` to reflect readme_yard updates
+- Updated README
+
 ## [0.4.0] - 2025-05-03
 
 ### Breaking Changes
@@ -22,10 +29,6 @@
 ### Dependencies
 - Updated YARD dependency from `~> 0.9.26` to `~> 0.9` to support newer versions
 - Removed specific readme_yard development dependency, now integrates with any compatible version
-
-### Internal Changes
-- Removed custom .yardopts file as it's now using the default configuration from readme_yard gem
-- Added comprehensive RDoc-style documentation to all classes and methods
 
 ## [0.3.0] - 2021-08-07
 

@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-require 'yard'
 require_relative "readme/version"
 require_relative "readme/docstring_parser"
 require_relative "readme/tag_factory"

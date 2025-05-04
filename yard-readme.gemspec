@@ -27,8 +27,6 @@ Gem::Specification.new do |spec|
   spec.require_paths = ["lib"]
 
   # Uncomment to register a new dependency of your gem
-  spec.add_dependency "yard", "~> 0.9"
-
   spec.add_development_dependency 'irb'
 
   # For more information and examples about making a new gem, checkout our

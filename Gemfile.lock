@@ -2,7 +2,6 @@ PATH
   remote: ../readme_yard
   specs:
     readme_yard (0.3.0)
-      irb
       tty-markdown (~> 0.7)
       yard (~> 0.9)
       yard-readme (~> 0.4)
@@ -10,8 +9,7 @@ PATH
 PATH
   remote: .
   specs:
-    yard-readme (0.4.0)
-      yard (~> 0.9)
+    yard-readme (0.5.0)
 
 GEM
   remote: https://rubygems.org/

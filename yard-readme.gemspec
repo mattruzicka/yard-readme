@@ -8,8 +8,8 @@ Gem::Specification.new do |spec|
   spec.authors = ["Matt Ruzicka"]
   spec.license = "MIT"
 
-  spec.summary = "Enhance your README with YARD"
-  spec.description = "Generate your README using comments in your code"
+  spec.summary = "YARD plugin for the readme_yard gem"
+  spec.description = "A YARD plugin that introduces the @readme tag and powers the readme_yard gem, enabling developers to embed code comments directly into README sections. This eliminates redundancy and keeps documentation consistent across code and project READMEs."
   spec.homepage = 'https://github.com/mattruzicka/yard-readme'
   spec.required_ruby_version = ">= 3.0.0"
 

@@ -1,3 +1,7 @@
+## [0.6.0] - 2025-05-04
+
+- Update Gemfile with published readme_yard gem
+
 ## [0.5.0] - 2025-05-04
 
 - Extracted description into separate file `lib/yard/readme/description.rb`

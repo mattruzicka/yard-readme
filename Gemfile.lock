@@ -1,15 +1,7 @@
 PATH
-  remote: ../readme_yard
-  specs:
-    readme_yard (0.3.0)
-      tty-markdown (~> 0.7)
-      yard (~> 0.9)
-      yard-readme (~> 0.4)
-
-PATH
   remote: .
   specs:
-    yard-readme (0.5.0)
+    yard-readme (0.6.0)
 
 GEM
   remote: https://rubygems.org/
@@ -35,6 +27,10 @@ GEM
       stringio
     rdoc (6.13.1)
       psych (>= 4.0.0)
+    readme_yard (0.3.0)
+      tty-markdown (~> 0.7)
+      yard (~> 0.9)
+      yard-readme (~> 0.5)
     reline (0.6.1)
       io-console (~> 0.5)
     rexml (3.4.1)
@@ -64,7 +60,7 @@ PLATFORMS
 DEPENDENCIES
   debug
   irb
-  readme_yard (>= 0.3)!
+  readme_yard (>= 0.3)
   yard-readme!
 
 BUNDLED WITH

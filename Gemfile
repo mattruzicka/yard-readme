@@ -6,4 +6,4 @@ source "https://rubygems.org"
 gemspec
 
 gem "debug"
-gem 'readme_yard', '>= 0.3', path: '../readme_yard'
+gem 'readme_yard', '>= 0.3'
